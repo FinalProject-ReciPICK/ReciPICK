@@ -1,0 +1,34 @@
+@tailwind base;
+
+* {
+  box-sizing: border-box;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f2f4f7;
+  margin: 0;
+  padding: 0;
+  /* 스크롤바로 인한 레이아웃 시프트 방지 */
+  overflow-y: scroll;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  /* height: 100dvh; */
+}
+
+/* 데스크탑 화면일 때만 최대 너비 제한 */
+@media screen and (min-width: 768px) {
+  #root {
+    max-width: 430px;
+  }
+}
